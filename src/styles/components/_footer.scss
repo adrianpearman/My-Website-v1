@@ -1,0 +1,34 @@
+.footer{
+  position: relative;
+}
+
+.footer-sub{
+  color: lighten($steel, 30);
+  background: linear-gradient($purple, $dark-purple);
+  text-align: center;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 30%;
+  vertical-align: middle;
+  margin-top: 5%;
+  p{
+    padding: 10px;
+  }
+}
+
+.footer-content {
+  width: 90%;
+  margin: 0 5%;
+}
+
+.footer-title{
+  text-align: center;
+  color: $dark-teal;
+  font-family: Rock Salt, sans-serif;
+}
+
+.footer-description{
+  display: block;
+  width: 100%;
+}

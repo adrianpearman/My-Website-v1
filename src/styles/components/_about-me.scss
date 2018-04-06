@@ -1,0 +1,77 @@
+.about-me {
+    width: 90%;
+    margin-left: 5%;
+}
+
+.about-me-title{
+  text-align: center;
+  color: $dark-teal;
+  font-family: Rock Salt, sans-serif;
+}
+
+.about-me-photo {
+  width: 45%;
+  display: inline-block;
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+
+.about-me-description {
+  display: inline-block;
+  width: 45%;
+  vertical-align: top;
+  margin-left: 5%;
+  button{
+    margin: 10px;
+    padding: 20px;
+    background-color: white;
+    color: $steel;
+    border: 1px solid $dark-teal;
+    border-radius: 5px;
+  }
+  #contact{
+    background: $purple;
+    border: 1px solid $dark-purple;
+    color: $white;
+  }
+  button:hover, #contact:hover{
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    background-color: $dark-teal;
+    color: lighten($steel, 50);
+  }
+}
+
+.about-me-contact-container {
+  h3{
+    margin: 0;
+  }
+  ul{
+    display: inline-block;
+    width: 35%;
+    list-style-type: none;
+  }
+}
+
+.about-me-contact-option{
+  font-size: 20px;
+}
+
+.emphasize{
+  color: $purple;
+  font-size: 20px;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.traits-skills, .traits-experience {
+  width: 40%;
+  margin: 3%;
+  display: inline-block;
+  h3{
+    color: $dark-teal;
+    font-family: Rock Salt, sans-serif;
+  }
+}

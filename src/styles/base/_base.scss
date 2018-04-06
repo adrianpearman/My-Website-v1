@@ -1,0 +1,28 @@
+*{
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-family: Raleway, arial, sans-serif;
+  font-size: $m-size;
+  line-height: 1.6;
+  color: $dark-steel;
+}
+
+a{
+  text-decoration: none;
+  color: $dark-steel;
+}
+
+.row:after {
+  content: '';
+  height: 5px;
+  width: 30%;
+  background: $yellow;
+  margin: 2% auto 5%;
+  display: block;
+}
