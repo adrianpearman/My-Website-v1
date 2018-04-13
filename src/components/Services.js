@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Ionicon from 'react-ionicons'
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 
 class Services extends Component {
 
@@ -12,17 +12,17 @@ class Services extends Component {
 
         <div className="services-container">
           <div className="services-details">
-            <Ionicon icon='ios-contacts' fontSize = '35px' classNameName='center'></Ionicon>
+            <span className='services-icon'><FontAwesomeIcon icon={["fas", "chart-bar"]}/></span>
             <br/>
             The last time you had a cheeseburger was too long ago. Try not to drool when you think about the slightly charred, medium-rare meat nestled between soft brioche, cradled in crisp iceberg lettuce and flavour amplifying condiments. Why are you still reading this- go get a cheeseburger.
           </div>
           <div className="services-details">
-            <Ionicon icon='md-flash' fontSize = '35px' classNameName='center'></Ionicon>
+            <span className='services-icon'><FontAwesomeIcon icon={["fas", "keyboard"]}/>  </span>
             <br/>
             The last time you had a cheeseburger was too long ago. Try not to drool when you think about the slightly charred, medium-rare meat nestled between soft brioche, cradled in crisp iceberg lettuce and flavour amplifying condiments. Why are you still reading this- go get a cheeseburger.
           </div>
           <div className="services-details">
-            <Ionicon icon='ios-podium' fontSize = '35px' classNameName='center'></Ionicon>
+            <span className='services-icon'><FontAwesomeIcon className='services-icon' icon={["fas", "address-card"]}/>  </span>
             <br/>
             The last time you had a cheeseburger was too long ago. Try not to drool when you think about the slightly charred, medium-rare meat nestled between soft brioche, cradled in crisp iceberg lettuce and flavour amplifying condiments. Why are you still reading this- go get a cheeseburger.
           </div>

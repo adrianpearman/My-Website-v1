@@ -1,5 +1,10 @@
 .navigation{
   margin-bottom: 20px;
+  background: lighten($dark-purple, 0.05);
+  margin-bottom: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .navigation-logo{
@@ -10,10 +15,30 @@
   text-decoration: none;
   list-style-type: none;
   padding: 0;
+  margin: 0;
+  opacity: 0.8;
 }
 
 .navigation-list-item {
-  width: 10%;
+  width: 25%;
   display: inline-block;
-  margin: 0 7%;
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
 }
+
+.navigation-list-item:hover {
+  background: $dark-teal;
+  transition: 0.5s;
+  a{
+    color: $dark-purple;
+    cursor: pointer; 
+  }
+}
+
+.navigation-text{
+  color: $mustard-yellow
+}
+
+
+
