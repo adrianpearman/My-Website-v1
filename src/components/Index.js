@@ -18,115 +18,137 @@ import LoadingComponent from './LoadingComponent'
 const duration = 250
 const durationTop = 800
 
-class Index extends Component{
-  state = {
-    projects:[
+class Index extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+       projects: [
       {
-        title: 'Project 1',
-        description: 'Test application description',
-        stack: ['HTML5', 'CSS3', 'Javascript', 'Bootstrap'],
-        img: 'http://lorempicsum.com/simpsons/350/200/1'
+        title: "Project 1",
+        description: "Test application description",
+        stack: ["HTML5", "CSS3", "Javascript", "Bootstrap"],
+        img: "http://lorempicsum.com/futurama/350/200/1"
       },
       {
-        title: 'Project 1',
-        description: 'Test application description',
-        stack: ['HTML5', 'CSS3', 'Javascript', 'Bootstrap'],
-        img: 'http://lorempicsum.com/simpsons/350/200/1'
+        title: "Project 1",
+        description: "Test application description",
+        stack: ["HTML5", "CSS3", "Javascript", "Bootstrap"],
+        img: "http://lorempicsum.com/futurama/350/200/1"
       },
       {
-        title: 'Project 1',
-        description: 'Test application description',
-        stack: ['HTML5', 'CSS3', 'Javascript', 'Bootstrap'],
-        img: 'http://lorempicsum.com/simpsons/350/200/1'
+        title: "Project 1",
+        description: "Test application description",
+        stack: ["HTML5", "CSS3", "Javascript", "Bootstrap"],
+        img: "http://lorempicsum.com/futurama/350/200/1"
       },
       {
-        title: 'Project 1',
-        description: 'Test application description',
-        stack: ['HTML5', 'CSS3', 'Javascript', 'Bootstrap'],
-        img: 'http://lorempicsum.com/simpsons/350/200/1'
+        title: "Project 1",
+        description: "Test application description",
+        stack: ["HTML5", "CSS3", "Javascript", "Bootstrap"],
+        img: "http://lorempicsum.com/futurama/350/200/1"
       }
     ],
-    navigation:[
-      'About Me', 'Projects', 'Contact Information'
-    ]
+    navigation: ["About Me", "Projects", "Contact Information"],
+    showNavigation: false
+    }
+    this.onScroll = this.onScroll.bind(this)
+  }
+ 
+  componentDidMount() {
+    Events.scrollEvent.register("begin", () => {
+      console.log("begin", arguments);
+    });
+    Events.scrollEvent.register("end", () => {
+      console.log("end", arguments);
+    });
+    window.addEventListener("scroll", this.onScroll);
   }
 
-  componentDidMount(){
-    Events.scrollEvent.register('begin', () => {
-      console.log('begin', arguments);
-    })
-    Events.scrollEvent.register('end', () => {
-      console.log('end', arguments);
-    })
+  scrollToTop() {
+    scroll.scrollToTop();
   }
 
-  scrollToTop(){
-    scroll.scrollToTop()
-  }
-
-  scrollTo(){
-    scroller.scrollTo('scroll-to-element',{
+  scrollTo() {
+    scroller.scrollTo("scroll-to-element", {
       duration: durationTop,
       delay: 0,
-      smooth: 'easeInOutQuart'
-    })
+      smooth: "easeInOutQuart"
+    });
   }
 
-  scrollToWithContainer(){
+  scrollToWithContainer() {
     let goToContainer = new Promise((resolve, reject) => {
-      Events.scrollEvent.register('end', () => {
-        resolve()
-        Events.scrollEvent.remove('end')
-      })
-      scroller.scrollTo('scroll-container-second-element', {
+      Events.scrollEvent.register("end", () => {
+        resolve();
+        Events.scrollEvent.remove("end");
+      });
+      scroller.scrollTo("scroll-container-second-element", {
         duration: durationTop,
         delay: 0,
-        smooth: 'easeInOutQuart',
-        containerId: 'scroll-container'
-      })
-    })
+        smooth: "easeInOutQuart",
+        containerId: "scroll-container"
+      });
+    });
   }
 
-  componentWillUnmount(){
-    Events.scrollEvent.remove('begin')
-    Events.scrollEvent.remove('end')
+  onScroll() {
+    // records the height of where the setstate will change
+    const headerHeight = window.innerHeight - 75;
+    // records the current y position on the page
+    const userWindow = window.pageYOffset;
+
+    // triggers the function to change the navigation bar
+    if (userWindow > headerHeight) {
+      console.log('changed')
+      this.setState({ showNavigation: true})
+    } 
+    
+    if (userWindow < headerHeight) {
+      console.log('unchanged')
+      this.setState({ showNavigation: false})
+    }
   }
 
-  render(){
-    const projects = (
-      this.state.projects ? <ProjectList project={this.state.projects} projects={this.state.projects} /> : <LoadingComponent />
-    )
-    return(
+  componentWillUnmount() {
+    Events.scrollEvent.remove("begin");
+    Events.scrollEvent.remove("end");
+    window.removeEventListener("scroll", this.onScroll);
+  }
+
+  render() {
+    const projects = this.state.projects ? (
+      <ProjectList
+        project={this.state.projects}
+        projects={this.state.projects}
+      />
+      ) : (
+      <LoadingComponent />
+    );
+    
+    const showNavigation = this.state.showNavigation ? 'navigation' : 'none'
+
+    return (
       <div>
         <Header />
-        <Navigation />
-
-        <Element
-          name='AboutMe'
-          className='element row'>
+        <Navigation showNavigation={showNavigation}/>
+        <Element name="AboutMe" className="element row">
           <AboutMe />
         </Element>
 
-        <Element
-          name='Services'
-          className='element row'>
+        <Element name="Services" className="element row">
           <Services />
         </Element>
 
-        <Element
-          name='Projects'
-          className='element row'>
+        <Element name="Projects" className="element row">
           <ProjectHeader />
-          { projects }
+          {projects}
         </Element>
 
-        <Element
-          name='Footer'
-          className='element'>
+        <Element name="Footer" className="element">
           <Footer />
         </Element>
       </div>
-    )
+    );
   }
 }
 

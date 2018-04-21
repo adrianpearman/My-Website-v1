@@ -2,8 +2,9 @@ import React from 'react'
 import * as Scroll from 'react-scroll'
 import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
-const Navigation = () => {
-  return <nav className="navigation">
+const Navigation = (props) => {
+  return (
+  <nav className={props.showNavigation}>
       <ul className="navigation-list">
         <li className='navigation-list-item'>
           <Link
@@ -53,7 +54,8 @@ const Navigation = () => {
           </Link>
         </li>
       </ul>
-    </nav>;
+    </nav>
+  )
 }
 
 export default Navigation

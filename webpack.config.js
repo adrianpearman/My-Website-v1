@@ -44,7 +44,25 @@ module.exports = (env) => {
             }
           ]
         })
-      }]
+      },{
+        test: /\.(pdf|jpg|png|gif|svg|ico)$/,
+        use: [
+          {
+            loader: 'url-loader'
+          },
+        ]
+      },{
+        test: /\.(jpg|png|gif|svg|pdf|ico)$/,
+        use: [
+            {
+            loader: 'file-loader',
+            options: {
+                name: '[path][name]-[hash:8].[ext]'
+            },
+          },
+        ]
+      },
+      ]
     },
     plugins: [
       CSSExtract,

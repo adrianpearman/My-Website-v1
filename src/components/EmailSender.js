@@ -6,9 +6,8 @@ class EmailSender extends Component {
       <div className='email-sender'>
         <div className='email-statement'>
           <p>
-            Thank you for taking the time to look through my website!
-            <br />
             Starting a new project? Exploring options for a current project? Looking to add a new member to your team? Contact me and lets collaborate!
+            <br />
             <br />
             I look forward to hearing from you!
           </p>

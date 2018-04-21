@@ -1,0 +1,1 @@
+export profileImage from './profilePhoto.jpg'
