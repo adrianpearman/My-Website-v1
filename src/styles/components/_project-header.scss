@@ -1,0 +1,15 @@
+.project-header {
+  color: $white;
+  text-align: center;
+  background-image: linear-gradient(rgba($teal, 0.7), rgba($dark-purple, 0.75)), url(/images/ProjectBackground.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: Rock Salt, sans-serif;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.project-header-title {
+  font-size: 9em;
+  line-height: 1.4em;
+}

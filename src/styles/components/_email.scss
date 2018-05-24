@@ -1,0 +1,74 @@
+.email-sender{
+  height: 20%;
+  width: 90%;
+  margin-right: 5%;
+  margin-left: auto;
+  color: lighten($steel, 30);
+}
+
+.email-statement,
+.email-form {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5%;
+}
+
+.email-statement{
+  width: 30%;
+  color: $teal;
+}
+
+.email-form{
+  width: 60%;
+  button{
+    padding: 10px 20px;
+    background-color: $mustard-yellow;
+    color: lighten($steel, 20);
+    border: 1px solid darken($mustard-yellow, 50);
+    border-radius: 5px;
+    float: right;
+    width: 20%;
+  }
+  button:hover{
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    background-color: $dark-teal;
+    color: lighten($steel, 50);
+  }
+}
+
+.email-inputs,
+.email-textarea {
+    display: inline-block;
+    width: 50%;
+}
+
+.email-inputs{
+  input {
+      height: 50px;
+      width: 100%;
+      margin-bottom: 15px;
+      border: 1px solid $purple;
+      border-radius: 5px;
+  }
+  ::placeholder{
+    padding-left: 10px;
+    color: $teal
+  }
+}
+
+.email-textarea{
+  textarea {
+    position: relative;
+    height: 115px;
+    width: 100%;
+    margin: 0 5%;
+    top: 18px;
+    border: 1px solid $purple;
+    border-radius: 5px;
+  }
+  ::placeholder{
+    padding-left: 10px;
+    color: $teal
+  }
+}

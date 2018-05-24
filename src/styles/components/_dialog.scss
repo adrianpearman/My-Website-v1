@@ -1,0 +1,38 @@
+.dialog{
+  font-family: Raleway, sans-serif;
+  img{width: 100%}
+  
+  h1{
+    font-family: Rock Salt;
+    color: $dark-purple
+  }
+  
+  h2{ color: $dark-purple}
+  
+  h3{ color: $dark-purple}
+
+  ul{ list-style: none;}
+
+  li::before {
+    content: "\2022 ";
+    color: #e58e26;
+    font-size: 150%;
+    margin: 0;
+    line-height: 1em;
+  }
+
+  li { text-indent: -2em;}
+}
+
+.dialog-description {
+  width: 50%;
+  margin: 0;
+  float: left;
+  text-align: left;
+  display: block;
+}
+
+.dialog-stack {
+  width: 50%;
+  float: right;
+}

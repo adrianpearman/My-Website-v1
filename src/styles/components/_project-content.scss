@@ -1,0 +1,91 @@
+.stats-container{
+  width: 80%;
+  margin: 0 auto;
+  height: 500px;
+  border-radius: 10px;
+}
+
+.stats{
+  width: 25%;
+  margin: 0;
+  display: inline-block;
+  padding: 1px;
+  text-align: center;
+  vertical-align: top;
+  height: 400px;
+  h2{
+    margin: 0;
+    text-align: center
+  }
+}
+
+.stats-profileInformation{
+   h2:first-child{
+    padding-top: 20px;
+    padding-bottom: 40px;
+    font-size: $m-size;
+    color: $purple;
+    font-family: Rock Salt, sans-serif;
+  }
+
+    h2:nth-child(2),
+    h2:nth-child(3),
+    h2:nth-child(4),
+    h2:nth-child(5){
+    text-align: left;
+    padding: 0 0 0 10%;
+      font-size: $m-size;
+  }
+}
+
+.stats-followers{
+ h2:first-child{
+    padding-top: 20px;
+    padding-bottom: 40px;
+    font-size: $m-size;
+    color: $purple;
+    height: 100px;
+    font-family: Rock Salt, sans-serif;
+  }
+  h2:nth-child(2){
+    font-size: $xxl-size;
+    margin-top: 10%;
+    color: $dark-teal;
+  }
+}
+.stats-repos{
+  h2:first-child{
+    padding-top: 20px;
+    padding-bottom: 40px;
+    font-size: $m-size;
+    color: $purple;
+    height: 100px;
+    font-family: Rock Salt, sans-serif;
+  }
+  h2:nth-child(2){
+    font-size: $xxl-size;
+    margin-top: 10%;
+    color: $dark-teal;
+  }
+}
+.stats-commits{
+ h2:first-child{
+    padding-top: 20px;
+    padding-bottom: 40px;
+    font-size: $m-size;
+    color: $purple;
+    height: 100px;
+    font-family: Rock Salt, sans-serif;
+  }
+  h2:nth-child(2){
+    font-size: $xxl-size;
+    margin-top: 10%;
+    color: $dark-teal;
+  }
+}
+
+#profilePhoto{
+  width: 80%;
+  margin: 0 auto;
+}
+

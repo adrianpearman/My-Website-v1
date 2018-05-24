@@ -1,0 +1,158 @@
+.about-me {
+    width: 80%;
+    margin-right: auto;
+    margin-left: 10%;
+}
+
+.about-me-title{
+  text-align: center;
+  color: $dark-teal;
+  font-family: Rock Salt, sans-serif;
+}
+
+.about-me-photo {
+  width: 45%;
+  display: inline-block;
+  margin-bottom: 5%;
+  img{
+    width: 70%;
+    height: auto;
+    margin: 5% auto 0 15%;
+    border-radius: 15px;
+    box-shadow: 3px 3px 8px $dark-purple;
+  }
+}
+
+.about-me-description {
+  display: inline-block;
+  width: 45%;
+  vertical-align: top;
+  margin-left: 5%;
+  button{
+    margin: 10px;
+    padding: 20px;
+    background-color: white;
+    color: $steel;
+    border: 1px solid $dark-teal;
+    border-radius: 5px;
+  }
+  #contact{
+    background: $purple;
+    border: 1px solid $dark-purple;
+    color: $white;
+  }
+  button:hover, #contact:hover{
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    background-color: $dark-teal;
+    color: lighten($steel, 50);
+  }
+}
+
+.about-me-contact-container {
+  h3{
+    margin: 0;
+  }
+  ul{
+    display: inline-block;
+    width: 35%;
+    list-style-type: none;
+  }
+}
+
+#linkedin, #github, #email {
+  margin: 0 5px;
+}
+
+#linkedin:hover, #github:hover, #email:hover {
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+
+#linkedin:hover{
+  color: $linkedin
+}
+
+#github:hover{
+  color:  $github
+}
+
+#email:hover{
+  color: $email
+}
+
+.emphasize{
+  color: $purple;
+  font-size: 20px;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.traits::after{
+  clear: both;
+  display: table;
+  content: " ";
+}
+
+.traits-skills, .traits-experience {
+  margin: 5%;
+  margin-top: 0;
+  h3{
+    color: $dark-teal;
+    font-family: Rock Salt, sans-serif;
+  }
+}
+
+.traits-skills {
+  float: left;
+}
+
+.traits-skills-container {
+    width: 45%;
+    display: inline;
+    float: right;
+}
+
+.traits-experience:before {
+    content: '';
+    height: 5px;
+    width: 30%;
+    background: $yellow;
+    margin: 2% auto 5%;
+    display: block;
+}
+
+.traits-experience {
+  float: right;
+}
+
+.traits-experience-container{
+  width: 50%;
+  padding: 2%;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 2%;
+  p{
+    margin-top: 0;
+  }
+}
+
+.traits-description {
+  margin-bottom: 2%;
+}
+
+.skills-list {
+  list-style: none;
+  margin-top: 0
+}
+
+.skills-list li::before {
+  content: "• ";
+  color: $mustard-yellow;
+  font-size: 150%;
+  margin: 0;
+  line-height: 1em;
+}
+.skills-list li {
+  text-indent: -2em;
+}

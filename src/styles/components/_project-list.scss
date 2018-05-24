@@ -1,0 +1,17 @@
+.projectContent {
+  width: 80%;
+  margin: 2% 10%;
+}
+
+.project-description {
+    width: 80%;
+    margin: 5% 10% 8% auto;
+} 
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-gap: 10px;
+  width: 90%;
+  margin: 5% auto 0 5%;
+}
